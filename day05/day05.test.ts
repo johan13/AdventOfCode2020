@@ -9,11 +9,11 @@ describe("Day 5", () => {
             assert.strictEqual(parseSeatId("FFFBBBFRRR"), 119);
             assert.strictEqual(parseSeatId("BBFFBBFRLL"), 820);
         });
-        it("Input should return 850", async () => {
-            assert.strictEqual(await getHighestSeatId("day05/input.txt"), 850);
+        it("Input should return 850", () => {
+            assert.strictEqual(getHighestSeatId("day05/input.txt"), 850);
         });
     });
-    it("Input should return 599", async () => {
-        assert.strictEqual(await findEmptySeat("day05/input.txt"), 599);
+    it("Input should return 599", () => {
+        assert.strictEqual(findEmptySeat("day05/input.txt"), 599);
     });
 });

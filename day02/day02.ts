@@ -3,9 +3,8 @@ import readAndParse from "../common/readAndParse";
 export const countValidPasswords1 = (filePath: string) => countValidPasswords(filePath, isValid1);
 export const countValidPasswords2 = (filePath: string) => countValidPasswords(filePath, isValid2);
 
-async function countValidPasswords(filePath: string, isValid: (x: Entry) => boolean) {
-    const input = await readAndParse(filePath, parseEntry);
-    return input.filter(isValid).length;
+function countValidPasswords(filePath: string, isValid: (x: Entry) => boolean) {
+    return readAndParse(filePath, parseEntry).filter(isValid).length;
 }
 
 type Entry = ReturnType<typeof parseEntry>;

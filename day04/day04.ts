@@ -3,9 +3,8 @@ import readAndParse from "../common/readAndParse";
 export const countValidPassports1 = (filePath: string) => countValidPassports(filePath, isValid1);
 export const countValidPassports2 = (filePath: string) => countValidPassports(filePath, isValid2);
 
-async function countValidPassports(filePath: string, isValid: (x: Map<string, string>) => boolean) {
-    const passports = await readAndParse(filePath, parsePassport, "\n\n");
-    return passports.filter(isValid).length;
+function countValidPassports(filePath: string, isValid: (x: Map<string, string>) => boolean) {
+    return readAndParse(filePath, parsePassport, "\n\n").filter(isValid).length;
 }
 
 function parsePassport(text: string) {

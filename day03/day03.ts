@@ -1,12 +1,12 @@
 import readAndParse from "../common/readAndParse";
 
-export async function countTrees(filePath: string) {
-    const map = await readAndParse(filePath, x => x);
+export function countTrees(filePath: string) {
+    const map = readAndParse(filePath, x => x);
     return countTreesAlongSlope(map, 3, 1);
 }
 
-export async function getProduct(filePath: string) {
-    const map = await readAndParse(filePath, x => x);
+export function getProduct(filePath: string) {
+    const map = readAndParse(filePath, x => x);
     return (
         countTreesAlongSlope(map, 1, 1) *
         countTreesAlongSlope(map, 3, 1) *
