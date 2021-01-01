@@ -11,7 +11,7 @@ describe("Day 23", () => {
         });
     });
     describe("Part 2", () => {
-        it.skip("Example should return 149245887792", () => {
+        it("Example should return 149245887792", () => {
             assert.strictEqual(part2("389125467"), 149245887792);
         });
         it("Input should return 5403610688", () => {
